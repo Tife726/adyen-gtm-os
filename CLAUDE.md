@@ -3,12 +3,86 @@
 ## Company
 Adyen (adyen.com): publicly listed (Euronext Amsterdam: ADYEN) financial technology platform: "One platform for payments, data, and financial products." Sells payments online and in person, platform payments (Adyen for Platforms), embedded finance, issuing, risk, and Intelligent Money Movement to enterprises and platforms. Q3 2026: €738.1M net revenue (+23%), €451.1B processed volume. 4,771 FTE (end 2025). Sources: `context/docs/research/company.md`.
 
-Key files:
-- `context/icp/icp.md`: five-layer ICP and who is not a fit.
-- `context/icp/personas.md`: champion, economic buyer and influencer personas.
-- `context/icp/signal-matrix.md`: segments x personas angles, scored buying signals, workflow tracker.
-- `context/docs/gtm-system.md`: end-to-end outbound GTM system with decisions per step.
-- `context/docs/research/`: company, customers, competitors, market, signals, voice, brand-stories and firmographics (raw, sourced).
+
+## File index
+Every tracked file, grouped by folder.
+
+**Root**
+- `CLAUDE.md`: this file. `README.md`: repo intro.
+- `.gitkeep` files hold empty folders: `context/brand-kit/`, `context/docs/research/`, `context/icp/`, `context/messaging/`, `context/positioning/`, `knowledge-base/learnings/`, `knowledge-base/playbooks/`, `meetings/`, `output/campaigns/`, `tools/`, `.claude/skills/`, `tools/rex/registry/schemas/`.
+- `.mcp.json`: Notion MCP server. `.claude/settings.json`: Miro plugin. `.gitignore`.
+
+**context/icp/**
+- `icp.md`: five-layer ICP (data-backed firmographic and technographic layers), not-a-fit, open questions.
+- `personas.md`: champion (Head of Payments), economic buyer (CFO or Treasurer), influencer (CTO or CIO).
+- `signal-matrix.md`: 6 segments x 3 personas with angles, 11 scored signals, top 5, workflow tracker.
+
+**context/messaging/**
+- `facts.md`: the ONLY source of names, numbers and claims for copy. Approved 2026-11-13. Sender identity still to be supplied.
+
+**context/docs/**
+- `gtm-system.md`: end-to-end outbound system v0.2 (Claude Code, Clay, HubSpot, n8n, PlusVibe, GitHub), with a link to the Miro board.
+- `research/company.md`: products, pricing, financials, team, leadership.
+- `research/customers.md`: named customers and verbatim testimonials.
+- `research/competitors.md`: competitor positioning (incl. Fiserv, Nexi, Rapyd, dLocal in their own words).
+- `research/market.md`: regulation and market changes (PSD3/PSR, agentic commerce).
+- `research/signals.md`: buying-signal evidence and the PSP detection test.
+- `research/voice.md`: Adyen's own headlines, taglines and product names.
+- `research/brand-stories.md`: 54 Adyen customer stories (metrics, quotes, switch triggers).
+- `research/firmographics.md`: enrichment of 54 named customers (size, revenue, HQ, stack).
+
+**context/positioning/, context/brand-kit/**: empty (placeholders only).
+
+**output/campaigns/**
+- `campaign-strategy.md`: 19 ranked campaign ideas.
+- `payment-talent-signal/workflow-spec.md`: payments-hiring workflow. Structure and copy approved.
+- `saas-payments-launch/workflow-spec.md`: SaaS payments-launch workflow. Structure, E1 and E2 approved; E3 and DMs awaiting approval.
+
+**diagrams/**
+- `adyen-gtm-system.json`: flowchart spec. `adyen-gtm-system.svg`: the board source. `adyen-gtm-system.png`: local preview. Board: https://miro.com/app/board/uXjVEOU-iKg=/
+
+**knowledge-base/playbooks/**
+- `signal-matrix-framework.md`, `workflow-anatomy.md`: targeting method and Mother Intent Catalog.
+- `copy-iron-laws.md`, `copy-frameworks.md`, `linkedin-dm-frameworks.md`, `copy-bans.yaml`: copy rules.
+- `templates/facts-template.md`: template for facts.md.
+- `clay/`: `actions-data-credits.md`, `expert.md`, `formulas.md`, `iron-laws.md`, `prompts.md`.
+
+**knowledge-base/learnings/, meetings/**: empty.
+
+**tools/**
+- `agent-browser/README.md`, `crawl4ai/README.md`: tool notes.
+- `rex/`: Rex v2.1 (unofficial Clay API client). Start at `tools/rex/README.md`. Every file:
+  - top level: `.gitignore`, `CHANGELOG.md`, `COOKIE_SETUP.md`, `GETTING_STARTED.md`, `LEARNINGS.md`, `LICENSE`, `README.md`, `action-registry.md`, `clay-api-reference.md`, `clay-session.json.example`, `clay_browser.py`, `clay_client.py`, `clay_costs.py`, `clay_flow.py`, `clay_public.py`, `clay_workspace_costs.py`, `requirements.txt`, `rex-config.example.json`
+  - `claylens/`: `README.md`, `analytics.html`, `analytics.js`, `background.js`, `content.js`, `manifest.json`, `styles.css`
+  - `claylens/icons/`: `icon-128.png`, `icon-16.png`, `icon-48.png`
+  - `claylens/lib/`: `aggregator.js`, `clay-api.js`, `column-classifier.js`, `cost-extractor.js`, `model-prices.js`, `provider-costs.js`
+  - `claylens/vendor/`: `chart.umd.min.js`
+  - `registry/`: `INDEX.md`
+  - `registry/schemas/`: `.gitkeep`
+  - `templates/`: `waterfall-work-email.json`
+  - `tests/`: `test_client_offline.py`, `test_export_schema_offline.py`, `test_local_additions_offline.py`, `test_workspace_costs_offline.py`
+
+**.claude/skills/** (18 skills, every file):
+- `agent-browser/`: `SKILL.md`
+- `build-clay/`: `SKILL.md`, `references/build-session-goal.md`, `references/column-playbook.md`, `references/technical-recipes.md`
+- `build-workflow-spec/`: `SKILL.md`
+- `calculate-costs/`: `SKILL.md`
+- `campaign-contract/`: `SKILL.md`, `references/contract-standard.md`, `references/example-contract.md`
+- `campaign-copy/`: `SKILL.md`
+- `campaign-qa/`: `SKILL.md`
+- `campaign-strategy/`: `SKILL.md`
+- `crawl4ai/`: `SKILL.md`
+- `design-clay-table-json/`: `SKILL.md`, `references/example.flow.json`, `references/flow-blueprint.schema.json`
+- `export-tables/`: `SKILL.md`
+- `import-clay-table/`: `SKILL.md`, `scripts/clay_table.py`, `scripts/import_flow.py`
+- `inbox-placement-test/`: `LICENSE`, `SKILL.md`, `config.example.json`, `reference/sop.md`, `scripts/0_token_audit.py`, `scripts/1_build.py`, `scripts/2_load_seeds.py`, `scripts/3_arm_tags.py`, `scripts/4_qa_preflight.py`, `scripts/5_launch.py`, `scripts/6_poll.py`, `scripts/7_results.py`, `scripts/8_write_sheet.py`, `scripts/bison_api.py`, `scripts/discover_pools.py`, `weekly/README.md`, `weekly/discover.py`
+- `miro-gtm-flowchart/`: `SKILL.md`, `examples/reliance-hmo.json`, `scripts/build_flowchart.py`
+- `prompt-builder/`: `SKILL.md`, `references/decision-to-prompt.md`, `references/pipeline-prompts.md`
+- `save-clay-schema/`: `SKILL.md`, `scripts/export_table_schema.py`
+- `signal-matrix/`: `SKILL.md`
+- `workspace-cost-audit/`: `SKILL.md`
+
+**weekly-priorities/**: `2026-W46.md`. **work-log/**: `2026-W46.md`.
 
 ## How this folder works
 - `.claude/skills/`: reusable Claude skills for repeat GTM tasks. Read when running a workflow that has a skill.
