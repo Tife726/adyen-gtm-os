@@ -25,4 +25,13 @@ Adyen (adyen.com): to fill in after research.
 - Ask before sending or publishing anything.
 - Log every change in this week's work log (`work-log/YYYY-Www.md`).
 
+## Skills (`.claude/skills/`)
+- Strategy: `signal-matrix`, `campaign-strategy`, `build-workflow-spec`, `campaign-copy`, `prompt-builder`
+- Clay build: `campaign-contract`, `design-clay-table-json`, `build-clay`, `import-clay-table`, `save-clay-schema`, `export-tables`
+- QA and cost: `campaign-qa`, `calculate-costs`, `workspace-cost-audit`, `inbox-placement-test`
+- Research and mapping: `crawl4ai`, `agent-browser`, `miro-gtm-flowchart`
+
 ## Tools
+- treg (CLI): paid data lookups. Check the price before every call (`treg catalog get <id>`). Always run with `TREG_CONFIG` pointing to `.treg/config.json` (set in `.claude/settings.local.json`).
+- Miro (MCP, plugin `miro@miro-ai`): diagrams, such as GTM system maps (use `miro-gtm-flowchart`).
+- Notion (MCP, `.mcp.json`): where we publish finished docs. GitHub stays the source of truth; edit here first, then publish.
