@@ -6,6 +6,7 @@ Adyen (adyen.com): publicly listed (Euronext Amsterdam: ADYEN) financial technol
 Key files:
 - `context/icp/icp.md`: five-layer ICP and who is not a fit.
 - `context/icp/personas.md`: champion, economic buyer and influencer personas.
+- `context/icp/signal-matrix.md`: segments x personas angles, scored buying signals, workflow tracker.
 - `context/docs/research/`: company, customers, competitors, market, signals, voice, brand-stories and firmographics (raw, sourced).
 
 ## How this folder works
