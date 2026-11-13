@@ -113,6 +113,31 @@ Every tracked file, grouped by folder.
 - Research and mapping: `crawl4ai`, `agent-browser`, `miro-gtm-flowchart`
 
 ## Tools
-- treg (CLI): paid data lookups. Check the price before every call (`treg catalog get <id>`). Always run with `TREG_CONFIG` pointing to `.treg/config.json` (set in `.claude/settings.local.json`).
-- Miro (MCP, plugin `miro@miro-ai`): diagrams, such as GTM system maps (use `miro-gtm-flowchart`).
-- Notion (MCP, `.mcp.json`): where we publish finished docs. GitHub stays the source of truth; edit here first, then publish.
+Status as of 2026-11-13. "Connected" means it works from this repo today.
+
+**Connected**
+- **Claude Code:** builds and runs everything here (skills, research, specs, copy, reviews).
+- **GitHub** (`git`, repo `adyen-gtm-os`): the source of truth. Commit and push after approved changes.
+- **treg** (CLI): paid data lookups. Check the price before every call (`treg catalog get <id>`). Always run with `TREG_CONFIG` pointing to `.treg/config.json` (set in `.claude/settings.local.json`). Budget used this week: about $0.96. Endpoints used:
+  - `harvestapi.linkedin.search.jobs` ($0.001/call): job-post signals.
+  - `companyenrich.companies.enrich` ($0.0098): firmographics.
+  - `predictleads.companies.technology_detections` ($0.04): PSPs in job posts.
+  - `crawl4ai.trustpilot.business.reviews` ($0.00135): reviews.
+  - `dataforseo.x.domain-analytics-technologies-domain-technologies-live` ($0.012): tested and not usable for PSPs.
+- **Miro** (MCP, plugin `miro@miro-ai`): diagrams. Board: https://miro.com/app/board/uXjVEOU-iKg=/ (use `miro-gtm-flowchart`).
+- **Web search and web fetch:** free research, used first.
+- **Python 3:** scripts in skills and `tools/rex/`. Pillow is only needed for flowchart previews (install it in a virtualenv).
+
+**Configured, not yet authenticated**
+- **Notion** (MCP, `.mcp.json`): where finished docs are published. GitHub stays the source of truth; edit here first, then publish. Needs sign-in via `/mcp` before use.
+
+**In the GTM system design, not yet connected to this repo** (see `context/docs/gtm-system.md`)
+- **Clay:** companies, enrichment, ICP fit, routing, people, email waterfall and validation. Accessed through Rex (`tools/rex/`, needs a Clay session cookie) and the Clay skills.
+- **HubSpot:** CRM, suppression list, LinkedIn task steps, reporting.
+- **n8n:** the scheduler and the pipes (weekly signal pulls, PlusVibe to HubSpot syncs, reply classification, weekly metrics).
+- **PlusVibe:** email sending, sending metrics, the reply inbox.
+
+**In the kit, not used yet**
+- **crawl4ai** (`tools/crawl4ai/`, skill `crawl4ai`): local crawling to Markdown.
+- **agent-browser** (`tools/agent-browser/`, skill `agent-browser`): browser automation.
+- **EmailBison and MailReach:** referenced only by the `inbox-placement-test` skill. Not part of this stack.
