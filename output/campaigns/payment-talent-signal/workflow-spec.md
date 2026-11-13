@@ -1,5 +1,6 @@
 # Workflow spec: Payment Talent Signal
-**Status:** STRUCTURE-APPROVED 2026-11-13 · E1, E2 approved (all 4 cells) · E3, DM1, DM2 written, awaiting approval
+**Status:** STRUCTURE-APPROVED 2026-11-13 
+**Copy:** COPY-APPROVED 2026-11-13 (E1, E2, E3, DM1, DM2). Before launch: subject line, sender values, section 7 cadence update, `{{job_title}}` cleaning rule
 
 **Source idea:** #3 "Payments team hiring" in `output/campaigns/campaign-strategy.md` (Tier 1, rank 1). Signal S1 / workflow W1 in `context/icp/signal-matrix.md`.
 
@@ -297,7 +298,7 @@ Email 2 notes:
 - `{{proof_quote}}` resolves to F2 (AS Colour CFO) for A1 and F3 (Teamfront) for B1, once facts.md is approved.
 - Cell 2's offer of "a first version" needs sales to agree to deliver it.
 
-### Email 3 (day 10, same thread, written 2026-11-13, awaiting approval)
+### Email 3 (day 10, same thread, approved 2026-11-13)
 
 Cell 1 (Leader × multi, to the CFO):
 ```
@@ -347,7 +348,7 @@ Best,
 {{sender_name}}
 ```
 
-### LinkedIn (written 2026-11-13, awaiting approval)
+### LinkedIn (approved 2026-11-13)
 
 Connection request (day 2): empty, no note.
 

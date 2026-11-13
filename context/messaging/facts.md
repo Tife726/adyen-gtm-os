@@ -1,9 +1,9 @@
 # Adyen: authorized copy facts
-**Status: DRAFT, not yet approved.** Proposed 2026-11-13 by Claude from `context/docs/research/`. Nothing below may appear in copy until the "Approved by / date" column is filled in.
+**Status: APPROVED 2026-11-13 by Tife Adunade** (claims F1-F7, value props A-C, proof names, bans, voice, CTA ladder). Proposed from `context/docs/research/`. Sender identity values are still to be supplied.
 
 This is the ONLY source of names, numbers and claims for prospect-facing copy (`/campaign-copy` FACTS GATE). Anything not listed here renders as `{{placeholder}}`.
 
-**Last updated:** 2026-11-13 (draft)
+**Last updated:** 2026-11-13 by Tife Adunade
 
 ---
 
@@ -24,13 +24,13 @@ Source: https://www.adyen.com/ (checked 2026-11-13, `research/voice.md`).
 ## Approved claims and numbers (use these exact phrasings)
 | # | Claim | Proposed phrasing | Source | Approved by / date |
 |---|---|---|---|---|
-| F1 | Retail consolidation | "Moose Knuckles went from at least four payment partners to one." | adyen.com/knowledge-hub/moose-knuckles-case-study (Adyen's wording) | pending |
-| F2 | Retail consolidation (CFO voice) | AS Colour's CFO said Adyen let them "transition from multiple legacy providers to a single platform in record time." | adyen.com press release, 18 May 2026 | pending |
-| F3 | Platform consolidation | Teamfront had "five or six integrated payment partners" and now manages "one relationship." | adyen.com/knowledge-hub/teamfront-chooses-adyen | pending |
-| F4 | Streaming authorization | "DAZN increased authorization by 5.19%." | adyen.com/knowledge-hub/case-study-dazn (headline) | pending |
-| F5 | Luxury authorization | "Prada Group saw a 9% authorization boost in Japan." | adyen.com/knowledge-hub/luxury-fashion-prada-customer-experience | pending |
-| F6 | Marketplace funds flow | Vinted: "Unifying our funds flow on a single platform is a key driver for VintedPay's scalability." | adyen.com press release, 9 Apr 2026 | pending |
-| F7 | Platform onboarding | ROLLER went "from onboarding customers in months to weeks." | adyen.com/knowledge-hub/roller-software-platform--payments-case-study | pending |
+| F1 | Retail consolidation | "Moose Knuckles went from at least four payment partners to one." | adyen.com/knowledge-hub/moose-knuckles-case-study (Adyen's wording) | Tife Adunade, 2026-11-13 |
+| F2 | Retail consolidation (CFO voice) | AS Colour's CFO said Adyen let them "transition from multiple legacy providers to a single platform in record time." | adyen.com press release, 18 May 2026 | Tife Adunade, 2026-11-13 |
+| F3 | Platform consolidation | Teamfront had "five or six integrated payment partners" and now manages "one relationship." | adyen.com/knowledge-hub/teamfront-chooses-adyen | Tife Adunade, 2026-11-13 |
+| F4 | Streaming authorization | "DAZN increased authorization by 5.19%." | adyen.com/knowledge-hub/case-study-dazn (headline) | Tife Adunade, 2026-11-13 |
+| F5 | Luxury authorization | "Prada Group saw a 9% authorization boost in Japan." | adyen.com/knowledge-hub/luxury-fashion-prada-customer-experience | Tife Adunade, 2026-11-13 |
+| F6 | Marketplace funds flow | Vinted: "Unifying our funds flow on a single platform is a key driver for VintedPay's scalability." | adyen.com press release, 9 Apr 2026 | Tife Adunade, 2026-11-13 |
+| F7 | Platform onboarding | ROLLER went "from onboarding customers in months to weeks." | adyen.com/knowledge-hub/roller-software-platform--payments-case-study | Tife Adunade, 2026-11-13 |
 
 **Formatting rules for proof**
 - Write company names exactly as above. Never use domains.
