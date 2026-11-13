@@ -31,3 +31,21 @@ Checked 2026-11-13. Each signal is linked to evidence where found.
 
 ## Evidence from Adyen's own customer stories
 See brand-stories.md section 3. The most common pre-switch trigger is 3 to 6+ fragmented providers or local acquirers. Then come country expansion, vertical SaaS launching embedded payments, fraud losses, and mergers.
+
+## Technographic detection test (2026-11-13)
+Can a data source detect which payment providers a company uses? I tested this on 8 known Adyen customers (Aritzia, PXG, On, Crocs, KIKO, Etsy, Vinted, DAZN), so the right answer was known in advance.
+
+| Source (treg) | Price | Adyen detected | Where the evidence came from | Verdict |
+|---|---|---|---|---|
+| `predictleads.companies.technology_detections` | $0.04/call | 4 of 8 (Aritzia, Crocs, Etsy, On) | Job postings only. It never detected Adyen from the website itself | Usable, with about 50% recall. Missing PSP data does not mean the company has no PSP |
+| `dataforseo.x.domain-analytics-technologies-domain-technologies-live` | $0.012/call | 0 of 8 | Front-end scan: it saw only Klarna and Afterpay | Not usable for PSPs |
+| `companyenrich.companies.enrich` (earlier run) | $0.0098/call | 0 of 54 | n/a | Not usable for PSPs |
+
+What PredictLeads detects reliably, from the websites themselves:
+- **BNPL and wallets:** Klarna, Afterpay, Affirm, PayPal.
+- **Third-party fraud tools:** Forter at Aritzia, Crocs and KIKO.
+
+Other findings:
+- **More than one PSP at once:** Crocs shows Adyen plus Braintree and PayPal (all from job postings, last seen 2026-08 to 2026-10).
+- **Noise at marketplaces:** Etsy shows Stripe, Square and WooCommerce on its subpages. These most likely come from sellers' content, not Etsy's own stack (INFERRED). Detections from subpages at marketplaces are unreliable.
+- **Cost:** $0.416 for 16 calls.

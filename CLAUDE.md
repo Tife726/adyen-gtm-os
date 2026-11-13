@@ -1,7 +1,12 @@
 # Adyen GTM Context OS
 
 ## Company
-Adyen (adyen.com): to fill in after research.
+Adyen (adyen.com): publicly listed (Euronext Amsterdam: ADYEN) financial technology platform: "One platform for payments, data, and financial products." Sells payments online and in person, platform payments (Adyen for Platforms), embedded finance, issuing, risk, and Intelligent Money Movement to enterprises and platforms. Q3 2026: €738.1M net revenue (+23%), €451.1B processed volume. 4,771 FTE (end 2025). Sources: `context/docs/research/company.md`.
+
+Key files:
+- `context/icp/icp.md`: five-layer ICP and who is not a fit.
+- `context/icp/personas.md`: champion, economic buyer and influencer personas.
+- `context/docs/research/`: company, customers, competitors, market, signals, voice, brand-stories and firmographics (raw, sourced).
 
 ## How this folder works
 - `.claude/skills/`: reusable Claude skills for repeat GTM tasks. Read when running a workflow that has a skill.
