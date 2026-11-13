@@ -1,5 +1,5 @@
 # Workflow spec: Payment Talent Signal
-**Status:** STRUCTURE-APPROVED 2026-11-13 · copy pending
+**Status:** STRUCTURE-APPROVED 2026-11-13 · E1, E2 approved (all 4 cells) · E3, DM1, DM2 written, awaiting approval
 
 **Source idea:** #3 "Payments team hiring" in `output/campaigns/campaign-strategy.md` (Tier 1, rank 1). Signal S1 / workflow W1 in `context/icp/signal-matrix.md`.
 
@@ -141,3 +141,225 @@ Copy may use no other variable.
 - [x] Cadence and channel declared
 
 **Next:** `/campaign-copy` on this file. Its gates will create `context/messaging/facts.md` first.
+
+---
+
+## Copy
+
+### Email 1
+
+**Cell 1 (Leader × multi), approved 2026-11-13, user-supplied text (render mode, kept verbatim)**
+
+```
+{{first_name}},
+
+Saw that {{company_name}} is hiring a Head of Payments.
+
+You're also currently processing payments through multiple providers, including {{psp_list}}.
+
+If simplifying your payment infrastructure is part of the team's priorities, it might be worth a conversation.
+
+Adyen helped {{proof_customer}} consolidate its payment providers and {{proof_result}}.
+
+Would you be open to exploring what that could look like for {{company_name}}?
+
+Best,
+{{sender_name}}
+```
+
+Flags raised. On 2026-11-13 the user chose to keep the text exactly as written ("none"). Flags 1-6 are accepted. Flag 7 (cells 2-4) was resolved on 2026-11-13: cells 2-4 were written in the user's shape and approved (below).
+1. "Saw that" matches the banned opener pattern in copy-bans.yaml.
+2. "Head of Payments" is hard-coded. The leader cells also fire on VP, Director and Chief titles. `{{job_title}}` is the contract variable.
+3. "You're also currently processing…" states the provider detection as certain. Detection recall is about 50%, and the list comes from job posts.
+4. "If simplifying … it might be worth a conversation" is conditional selling (line law: value prop stated flat).
+5. `{{proof_result}}` must be phrased to follow "consolidate its payment providers and". facts.md entries are pending approval.
+6. There is no subject line yet.
+7. Cells 2-4: this text needs `{{psp_list}}`, which only exists in cells 1 and 3. Cells 2 and 4 need their own Email 1.
+
+**Cells 2-4, approved 2026-11-13 (written in the user's cell 1 shape)**
+
+Cell 2 (Leader × unconfirmed, to the CFO):
+```
+{{first_name}},
+
+{{company_name}} is hiring a Head of Payments.
+
+My guess is payments is becoming its own function there, with one person owning the markets, methods and providers.
+
+If getting that setup right for the new hire is part of the priorities, it might be worth a conversation.
+
+Adyen helped {{proof_customer}} {{proof_result}}.
+
+Would you be open to exploring what that could look like for {{company_name}}?
+
+Best,
+{{sender_name}}
+```
+
+Cell 3 (Team × multi, to the Head of Payments):
+```
+{{first_name}},
+
+{{company_name}} is hiring a {{job_title}}.
+
+You're also currently processing payments through multiple providers, including {{psp_list}}.
+
+If simplifying your payment infrastructure is part of the team's priorities, it might be worth a conversation.
+
+Adyen helped {{proof_customer}} consolidate its payment providers and {{proof_result}}.
+
+Would you be open to exploring what that could look like for {{company_name}}?
+
+Best,
+{{sender_name}}
+```
+
+Cell 4 (Team × unconfirmed, to the Head of Payments):
+```
+{{first_name}},
+
+{{company_name}} is hiring a {{job_title}}.
+
+My guess is the team is measured on how many payments get approved in each market.
+
+If raising approval rates is part of the team's priorities, it might be worth a conversation.
+
+Adyen helped {{proof_customer}} {{proof_result}}.
+
+Would you be open to exploring what that could look like for {{company_name}}?
+
+Best,
+{{sender_name}}
+```
+
+Email 1 notes:
+- Subject: not set yet.
+- The proof phrasing follows "helped" (cells 2 and 4) or "…and" (cells 1 and 3). The facts.md entries must be written to fit.
+- `{{job_title}}` needs a cleaning rule (strip gender tags, locations and codes) before launch. This is a pending spec change.
+
+### Email 2 (day 4, same thread, approved 2026-11-13)
+
+Cell 1 (Leader × multi, to the CFO):
+```
+{{first_name}},
+
+A new Head of Payments usually inherits whatever provider setup is in place on day one.
+
+{{proof_quote}}
+
+Is that worth a conversation before the hire starts?
+
+Best,
+{{sender_name}}
+```
+
+Cell 2 (Leader × unconfirmed, to the CFO):
+```
+{{first_name}},
+
+One thing that tends to help a new payments lead is a single view of markets, payment methods and providers before their first day.
+
+Happy to put a first version together for {{company_name}}.
+
+Would that be useful?
+
+Best,
+{{sender_name}}
+```
+
+Cell 3 (Team × multi, to the Head of Payments):
+```
+{{first_name}},
+
+Adding people is one way to run several providers. Running fewer of them is another.
+
+{{proof_quote}}
+
+Worth comparing notes on how {{company_name}} has it set up?
+
+Best,
+{{sender_name}}
+```
+
+Cell 4 (Team × unconfirmed, to the Head of Payments):
+```
+{{first_name}},
+
+A simpler question than my last email.
+
+How many providers are {{company_name}}'s payments running through today?
+
+Best,
+{{sender_name}}
+```
+
+Email 2 notes:
+- `{{proof_quote}}` resolves to F2 (AS Colour CFO) for A1 and F3 (Teamfront) for B1, once facts.md is approved.
+- Cell 2's offer of "a first version" needs sales to agree to deliver it.
+
+### Email 3 (day 10, same thread, written 2026-11-13, awaiting approval)
+
+Cell 1 (Leader × multi, to the CFO):
+```
+{{first_name}},
+
+Last note from me.
+
+If the provider question sits with someone else at {{company_name}}, or with the new Head of Payments once they start, who should I talk to?
+
+Best,
+{{sender_name}}
+```
+
+Cell 2 (Leader × unconfirmed, to the CFO):
+```
+{{first_name}},
+
+Last note from me.
+
+If this makes more sense once the new Head of Payments has started, happy to wait. Who should I speak with then?
+
+Best,
+{{sender_name}}
+```
+
+Cell 3 (Team × multi, to the Head of Payments):
+```
+{{first_name}},
+
+Last note from me.
+
+If running fewer providers isn't on the table this year, no problem. Is there a better time to compare notes, or someone else on the team I should speak with?
+
+Best,
+{{sender_name}}
+```
+
+Cell 4 (Team × unconfirmed, to the Head of Payments):
+```
+{{first_name}},
+
+Last note from me.
+
+If approval rates sit with someone else on the team, who would be the right person?
+
+Best,
+{{sender_name}}
+```
+
+### LinkedIn (written 2026-11-13, awaiting approval)
+
+Connection request (day 2): empty, no note.
+
+DM 1 (day 6, after the connection is accepted, dynamic by cell):
+- Cell 1: "Hi {{first_name}}, with the Head of Payments role open, is the provider setup something you'd want settled before they start, or left for them?"
+- Cell 2: "Hi {{first_name}}, with the Head of Payments role open at {{company_name}}, what's the first thing you'd want them to take on?"
+- Cell 3: "Hi {{first_name}}, is the new {{job_title}} mostly about running the current provider setup, or something new?"
+- Cell 4: "Hi {{first_name}}, what will the new {{job_title}} focus on first?"
+
+DM 2 (day 13, static, all cells):
+"{Thanks for connecting|Appreciate the connect}, {{first_name}}. I work on payments at Adyen, in case the provider question {ever comes up|comes up later} for {{company_name}}."
+
+Sequence notes:
+- The spec cadence in section 7 still shows 4 emails and needs updating to 3 emails plus 2 DMs (proposed: days 1, 2, 4, 6, 10, 13).
+- No subject line is set yet.
